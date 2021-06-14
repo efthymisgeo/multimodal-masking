@@ -1,0 +1,732 @@
+2021-06-09 21:06:17.505 | INFO     | slp.util.log:configure_logging:84 - Log file will be saved in logs/mosei-rnn-m3-0.2.20210609-210617.log
+2021-06-09 21:06:18.350 | INFO     | slp.plbind.dm:setup:159 - Using provided validation set
+2021-06-09 21:06:18.351 | INFO     | slp.plbind.dm:setup:162 - Using provided test set
+2021-06-09 21:06:18.351 | INFO     | slp.plbind.dm:setup:212 - Using 16327 samples for training
+2021-06-09 21:06:18.351 | INFO     | slp.plbind.dm:setup:213 - Using 1871 samples for validation
+2021-06-09 21:06:18.351 | INFO     | slp.plbind.dm:setup:216 - Using 4662 samples for testing
+2021-06-09 21:06:18.371 | INFO     | slp.plbind.trainer:make_trainer:428 - Logs will be saved in rnn-m3-0.2/mosei-rnn-m3-0.2
+2021-06-09 21:06:18.371 | INFO     | slp.plbind.trainer:make_trainer:429 - Logs will be saved in rnn-m3-0.2/mosei-rnn-m3-0.2/20210609-210618/checkpoints
+2021-06-09 21:06:18.409 | INFO     | slp.plbind.trainer:make_trainer:461 - Configured wandb and CSV loggers.
+2021-06-09 21:06:18.409 | INFO     | slp.plbind.trainer:make_trainer:462 - Wandb configured to run mosei-rnn-m3-0.2/20210609-210618 in project mosei-rnn-m3-0.2
+2021-06-09 21:06:18.410 | INFO     | slp.plbind.trainer:make_trainer:467 - Results will be stored online.
+2021-06-09 21:06:18.411 | INFO     | slp.plbind.trainer:make_trainer:475 - Experiment verbose description:
+MOSEI RNN-baseline with M3
+
+Tags:['mosei', 'rnn-baseline', 'm3', 'regularization']
+2021-06-09 21:06:18.413 | INFO     | slp.plbind.trainer:make_trainer:496 - Configured Early stopping and Model checkpointing to track val_loss
+2021-06-09 21:06:18.434 | INFO     | pytorch_lightning.utilities.distributed:_info:54 - GPU available: True, used: True
+2021-06-09 21:06:18.434 | INFO     | pytorch_lightning.utilities.distributed:_info:54 - TPU available: None, using: 0 TPU cores
+2021-06-09 21:06:19.309 | INFO     | slp.plbind.trainer:watch_model:613 - Tracking model weights & gradients in wandb.
+2021-06-09 21:06:19.311 | INFO     | pytorch_lightning.accelerators.gpu:set_nvidia_flags:40 - LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [3]
+2021-06-09 21:06:21.758 | INFO     | pytorch_lightning.core.lightning:summarize:1457 - 
+  | Name          | Type                            | Params
+------------------------------------------------------------------
+0 | model         | AudioVisualTextMaskedClassifier | 1.6 M 
+1 | criterion     | L1Loss                          | 0     
+2 | train_metrics | ModuleDict                      | 0     
+3 | val_metrics   | ModuleDict                      | 0     
+4 | test_metrics  | ModuleDict                      | 0     
+------------------------------------------------------------------
+1.6 M     Trainable params
+0         Non-trainable params
+1.6 M     Total params
+6.535     Total estimated model params size (MB)
+2021-06-09 21:06:22.051 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 1 Validation results
+2021-06-09 21:06:22.052 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:06:22.052 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.5094696879386902
+2021-06-09 21:06:22.053 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.640625       
+2021-06-09 21:06:22.053 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.09375        
+2021-06-09 21:06:22.054 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.015625       
+2021-06-09 21:06:22.054 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.37208032608032227
+2021-06-09 21:06:22.055 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.5138251781463623
+2021-06-09 21:06:22.055 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         5.610907554626465
+2021-06-09 21:06:22.055 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        5.610907554626465
+2021-06-09 21:06:22.056 | INFO     | slp.plbind.module:log_to_console:484 - best_score      inf            
+2021-06-09 21:06:22.056 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:06:55.927 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 1 Training results
+2021-06-09 21:06:55.927 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:06:55.928 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.6753999590873718
+2021-06-09 21:06:55.929 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.6549919843673706
+2021-06-09 21:06:55.929 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.3762667775154114
+2021-06-09 21:06:55.930 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.3703959286212921
+2021-06-09 21:06:55.930 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.6537724733352661
+2021-06-09 21:06:55.931 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.6438964605331421
+2021-06-09 21:06:55.931 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       1.0165126323699951
+2021-06-09 21:06:55.932 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      1.0165126323699951
+2021-06-09 21:06:55.932 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:06:57.742 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 1 Validation results
+2021-06-09 21:06:57.743 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:06:57.744 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.69536954164505
+2021-06-09 21:06:57.745 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.64085453748703
+2021-06-09 21:06:57.746 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.4502471685409546
+2021-06-09 21:06:57.746 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.4470691978931427
+2021-06-09 21:06:57.747 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.6916710734367371
+2021-06-09 21:06:57.748 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.6489242911338806
+2021-06-09 21:06:57.748 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.7312338948249817
+2021-06-09 21:06:57.749 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.7312338948249817
+2021-06-09 21:06:57.750 | INFO     | slp.plbind.module:log_to_console:484 - best_score      inf            
+2021-06-09 21:06:57.750 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:06:57.752 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 1 Early Stopping
+2021-06-09 21:06:57.753 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:06:57.754 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.7312338948249817
+2021-06-09 21:06:57.754 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   10             
+2021-06-09 21:06:57.755 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:07:31.697 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 2 Training results
+2021-06-09 21:07:31.698 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:07:31.699 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.7717175483703613
+2021-06-09 21:07:31.699 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.7462869882583618
+2021-06-09 21:07:31.700 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.45678114891052246
+2021-06-09 21:07:31.700 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.44834181666374207
+2021-06-09 21:07:31.701 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.7651467323303223
+2021-06-09 21:07:31.702 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.7471586465835571
+2021-06-09 21:07:31.702 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.7046459913253784
+2021-06-09 21:07:31.703 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.7046459913253784
+2021-06-09 21:07:31.703 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:07:33.591 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 2 Validation results
+2021-06-09 21:07:33.592 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:07:33.593 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.7105876207351685
+2021-06-09 21:07:33.593 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.6449506282806396
+2021-06-09 21:07:33.594 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.48732343316078186
+2021-06-09 21:07:33.595 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.47937852144241333
+2021-06-09 21:07:33.596 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7198303937911987
+2021-06-09 21:07:33.596 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.6640377640724182
+2021-06-09 21:07:33.597 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.6751110553741455
+2021-06-09 21:07:33.598 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.6751110553741455
+2021-06-09 21:07:33.598 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.7312338948249817
+2021-06-09 21:07:33.599 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:07:33.601 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 2 Early Stopping
+2021-06-09 21:07:33.602 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:07:33.603 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.6751110553741455
+2021-06-09 21:07:33.604 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   10             
+2021-06-09 21:07:33.604 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:08:06.946 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 3 Training results
+2021-06-09 21:08:06.947 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:08:06.947 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.7999623417854309
+2021-06-09 21:08:06.948 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.768791913986206
+2021-06-09 21:08:06.949 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.489096999168396
+2021-06-09 21:08:06.949 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.47711071372032166
+2021-06-09 21:08:06.950 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.7980291843414307
+2021-06-09 21:08:06.951 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.7738491296768188
+2021-06-09 21:08:06.951 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.6511873602867126
+2021-06-09 21:08:06.952 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.6511873602867126
+2021-06-09 21:08:06.952 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:08:08.928 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 3 Validation results
+2021-06-09 21:08:08.929 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:08:08.930 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.7969433069229126
+2021-06-09 21:08:08.930 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.7869350910186768
+2021-06-09 21:08:08.931 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.49322035908699036
+2021-06-09 21:08:08.932 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.4768008589744568
+2021-06-09 21:08:08.932 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.789840042591095
+2021-06-09 21:08:08.933 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.7874663472175598
+2021-06-09 21:08:08.934 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.6352779865264893
+2021-06-09 21:08:08.935 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.6352779865264893
+2021-06-09 21:08:08.935 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.6751110553741455
+2021-06-09 21:08:08.936 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:08:08.938 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 3 Early Stopping
+2021-06-09 21:08:08.939 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:08:08.940 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.6352779865264893
+2021-06-09 21:08:08.940 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   10             
+2021-06-09 21:08:08.941 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:08:42.980 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 4 Training results
+2021-06-09 21:08:42.980 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:08:42.982 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.8119832873344421
+2021-06-09 21:08:42.983 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.7833554744720459
+2021-06-09 21:08:42.985 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.5011706352233887
+2021-06-09 21:08:42.986 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.48667702078819275
+2021-06-09 21:08:42.988 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8079781532287598
+2021-06-09 21:08:42.989 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.7859946489334106
+2021-06-09 21:08:42.990 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.6380710005760193
+2021-06-09 21:08:42.992 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.6380710005760193
+2021-06-09 21:08:42.993 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:08:44.921 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 4 Validation results
+2021-06-09 21:08:44.923 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:08:44.926 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.7993537187576294
+2021-06-09 21:08:44.928 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.7927613258361816
+2021-06-09 21:08:44.930 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5279307961463928
+2021-06-09 21:08:44.931 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5152189135551453
+2021-06-09 21:08:44.933 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7890428304672241
+2021-06-09 21:08:44.935 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.791172206401825
+2021-06-09 21:08:44.937 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.5983818173408508
+2021-06-09 21:08:44.939 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.5983818173408508
+2021-06-09 21:08:44.940 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.6352779865264893
+2021-06-09 21:08:44.942 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:08:44.947 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 4 Early Stopping
+2021-06-09 21:08:44.950 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:08:44.952 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5983818173408508
+2021-06-09 21:08:44.953 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   10             
+2021-06-09 21:08:44.954 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:09:18.671 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 5 Training results
+2021-06-09 21:09:18.671 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:09:18.672 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.8192003965377808
+2021-06-09 21:09:18.673 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.7849804162979126
+2021-06-09 21:09:18.673 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.5126415491104126
+2021-06-09 21:09:18.674 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.4958851635456085
+2021-06-09 21:09:18.674 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8161446452140808
+2021-06-09 21:09:18.675 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.7883983254432678
+2021-06-09 21:09:18.675 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.6147839426994324
+2021-06-09 21:09:18.676 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.6147839426994324
+2021-06-09 21:09:18.676 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:09:20.502 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 5 Validation results
+2021-06-09 21:09:20.504 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:09:20.506 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.8000684380531311
+2021-06-09 21:09:20.508 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.8086511492729187
+2021-06-09 21:09:20.510 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5038841962814331
+2021-06-09 21:09:20.511 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5007062554359436
+2021-06-09 21:09:20.513 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7863585948944092
+2021-06-09 21:09:20.515 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.8026902675628662
+2021-06-09 21:09:20.517 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.6042139530181885
+2021-06-09 21:09:20.518 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.6042139530181885
+2021-06-09 21:09:20.520 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5983818173408508
+2021-06-09 21:09:20.522 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:09:20.527 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 5 Early Stopping
+2021-06-09 21:09:20.528 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:09:20.529 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5983818173408508
+2021-06-09 21:09:20.530 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   9              
+2021-06-09 21:09:20.531 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:09:54.107 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 6 Training results
+2021-06-09 21:09:54.108 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:09:54.108 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.8245531320571899
+2021-06-09 21:09:54.109 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.7936906218528748
+2021-06-09 21:09:54.110 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.5185211300849915
+2021-06-09 21:09:54.110 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.5015813112258911
+2021-06-09 21:09:54.111 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8214899301528931
+2021-06-09 21:09:54.111 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.7968779802322388
+2021-06-09 21:09:54.112 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.6047715544700623
+2021-06-09 21:09:54.112 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.6047715544700623
+2021-06-09 21:09:54.113 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:09:56.039 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 6 Validation results
+2021-06-09 21:09:56.040 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:09:56.041 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.7993757128715515
+2021-06-09 21:09:56.042 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.780579149723053
+2021-06-09 21:09:56.043 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5309675335884094
+2021-06-09 21:09:56.043 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5214335918426514
+2021-06-09 21:09:56.044 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7933881282806396
+2021-06-09 21:09:56.045 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.7833653092384338
+2021-06-09 21:09:56.045 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.5771774649620056
+2021-06-09 21:09:56.046 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.5771774649620056
+2021-06-09 21:09:56.047 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5983818173408508
+2021-06-09 21:09:56.047 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:09:56.049 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 6 Early Stopping
+2021-06-09 21:09:56.050 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:09:56.051 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5771774649620056
+2021-06-09 21:09:56.052 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   10             
+2021-06-09 21:09:56.052 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:10:29.837 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 7 Training results
+2021-06-09 21:10:29.838 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:10:29.839 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.8332019448280334
+2021-06-09 21:10:29.839 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.7999632954597473
+2021-06-09 21:10:29.840 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.5305860042572021
+2021-06-09 21:10:29.840 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.5135238766670227
+2021-06-09 21:10:29.841 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8309255838394165
+2021-06-09 21:10:29.841 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.8042436242103577
+2021-06-09 21:10:29.842 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.584233283996582
+2021-06-09 21:10:29.842 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.584233283996582
+2021-06-09 21:10:29.843 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:10:31.771 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 7 Validation results
+2021-06-09 21:10:31.772 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:10:31.773 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.7914710640907288
+2021-06-09 21:10:31.774 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.7576624155044556
+2021-06-09 21:10:31.774 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.547775387763977
+2021-06-09 21:10:31.775 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5377118587493896
+2021-06-09 21:10:31.776 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7950171828269958
+2021-06-09 21:10:31.777 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.7700386047363281
+2021-06-09 21:10:31.777 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.5779822468757629
+2021-06-09 21:10:31.778 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.5779822468757629
+2021-06-09 21:10:31.779 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5771774053573608
+2021-06-09 21:10:31.779 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:10:31.781 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 7 Early Stopping
+2021-06-09 21:10:31.782 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:10:31.783 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5771774649620056
+2021-06-09 21:10:31.783 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   9              
+2021-06-09 21:10:31.784 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:11:05.590 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 8 Training results
+2021-06-09 21:11:05.590 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:11:05.591 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.83891361951828
+2021-06-09 21:11:05.592 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.8061573505401611
+2021-06-09 21:11:05.592 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.5489323735237122
+2021-06-09 21:11:05.593 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.5295463800430298
+2021-06-09 21:11:05.593 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8369017243385315
+2021-06-09 21:11:05.594 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.8101266622543335
+2021-06-09 21:11:05.594 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.566004753112793
+2021-06-09 21:11:05.595 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.566004753112793
+2021-06-09 21:11:05.595 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:11:07.578 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 8 Validation results
+2021-06-09 21:11:07.580 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:11:07.582 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.8149279356002808
+2021-06-09 21:11:07.584 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.8128884434700012
+2021-06-09 21:11:07.586 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5336158275604248
+2021-06-09 21:11:07.587 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.519844651222229
+2021-06-09 21:11:07.589 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.8070496320724487
+2021-06-09 21:11:07.590 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.8127306699752808
+2021-06-09 21:11:07.592 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.5730725526809692
+2021-06-09 21:11:07.593 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.5730725526809692
+2021-06-09 21:11:07.594 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5771774053573608
+2021-06-09 21:11:07.595 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:11:07.599 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 8 Early Stopping
+2021-06-09 21:11:07.600 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:11:07.601 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5730725526809692
+2021-06-09 21:11:07.602 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   10             
+2021-06-09 21:11:07.603 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:11:42.165 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 9 Training results
+2021-06-09 21:11:42.166 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:11:42.166 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.8455010652542114
+2021-06-09 21:11:42.167 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.8118535280227661
+2021-06-09 21:11:42.167 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.5575639009475708
+2021-06-09 21:11:42.168 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.5380555987358093
+2021-06-09 21:11:42.168 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8427021503448486
+2021-06-09 21:11:42.168 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.8151118755340576
+2021-06-09 21:11:42.169 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.5528807640075684
+2021-06-09 21:11:42.169 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.5528807640075684
+2021-06-09 21:11:42.170 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:11:44.015 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 9 Validation results
+2021-06-09 21:11:44.016 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:11:44.018 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.8009310960769653
+2021-06-09 21:11:44.019 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.7843573689460754
+2021-06-09 21:11:44.021 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5260593295097351
+2021-06-09 21:11:44.022 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5133474469184875
+2021-06-09 21:11:44.023 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7960721850395203
+2021-06-09 21:11:44.024 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.7873876690864563
+2021-06-09 21:11:44.025 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.5796202421188354
+2021-06-09 21:11:44.026 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.5796202421188354
+2021-06-09 21:11:44.027 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5730724930763245
+2021-06-09 21:11:44.029 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:11:44.032 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 9 Early Stopping
+2021-06-09 21:11:44.033 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:11:44.034 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5730725526809692
+2021-06-09 21:11:44.034 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   9              
+2021-06-09 21:11:44.035 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:12:17.750 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 10 Training results
+2021-06-09 21:12:17.750 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:12:17.751 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.8413621783256531
+2021-06-09 21:12:17.752 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.8081842064857483
+2021-06-09 21:12:17.752 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.5643520951271057
+2021-06-09 21:12:17.753 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.5452106595039368
+2021-06-09 21:12:17.753 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8388954997062683
+2021-06-09 21:12:17.754 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.8115267157554626
+2021-06-09 21:12:17.754 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.5392840504646301
+2021-06-09 21:12:17.755 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.5392840504646301
+2021-06-09 21:12:17.755 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:12:19.688 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 10 Validation results
+2021-06-09 21:12:19.689 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:12:19.690 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.7793826460838318
+2021-06-09 21:12:19.691 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.8155367374420166
+2021-06-09 21:12:19.692 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5177260041236877
+2021-06-09 21:12:19.692 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5134887099266052
+2021-06-09 21:12:19.693 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7479987740516663
+2021-06-09 21:12:19.694 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.7895206809043884
+2021-06-09 21:12:19.694 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.6070314645767212
+2021-06-09 21:12:19.695 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.6070314645767212
+2021-06-09 21:12:19.696 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5730724930763245
+2021-06-09 21:12:19.696 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:12:19.698 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 10 Early Stopping
+2021-06-09 21:12:19.699 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:12:19.700 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5730725526809692
+2021-06-09 21:12:19.700 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   8              
+2021-06-09 21:12:19.701 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:12:53.505 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 11 Training results
+2021-06-09 21:12:53.506 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:12:53.507 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.853628396987915
+2021-06-09 21:12:53.507 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.8203277587890625
+2021-06-09 21:12:53.508 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.5676020383834839
+2021-06-09 21:12:53.508 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.5460144877433777
+2021-06-09 21:12:53.509 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8511251211166382
+2021-06-09 21:12:53.510 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.8233413100242615
+2021-06-09 21:12:53.510 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.532870352268219
+2021-06-09 21:12:53.511 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.532870352268219
+2021-06-09 21:12:53.511 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:12:55.361 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 11 Validation results
+2021-06-09 21:12:55.363 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:12:55.365 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.7910048961639404
+2021-06-09 21:12:55.368 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.8208333849906921
+2021-06-09 21:12:55.370 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5266596078872681
+2021-06-09 21:12:55.371 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5165960788726807
+2021-06-09 21:12:55.373 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7638275623321533
+2021-06-09 21:12:55.375 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.7994636297225952
+2021-06-09 21:12:55.377 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.5898285508155823
+2021-06-09 21:12:55.379 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.5898285508155823
+2021-06-09 21:12:55.380 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5730724930763245
+2021-06-09 21:12:55.380 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:12:55.382 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 11 Early Stopping
+2021-06-09 21:12:55.383 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:12:55.384 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5730725526809692
+2021-06-09 21:12:55.385 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   7              
+2021-06-09 21:12:55.386 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:13:28.830 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 12 Training results
+2021-06-09 21:13:28.831 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:13:28.832 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.8595676422119141
+2021-06-09 21:13:28.832 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.8225905299186707
+2021-06-09 21:13:28.833 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.5970436334609985
+2021-06-09 21:13:28.833 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.5742940902709961
+2021-06-09 21:13:28.834 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8576804399490356
+2021-06-09 21:13:28.834 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.826245903968811
+2021-06-09 21:13:28.835 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.4958922266960144
+2021-06-09 21:13:28.835 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.4958922266960144
+2021-06-09 21:13:28.836 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:13:30.724 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 12 Validation results
+2021-06-09 21:13:30.727 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:13:30.729 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.8014485836029053
+2021-06-09 21:13:30.730 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.8042020201683044
+2021-06-09 21:13:30.732 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5245409607887268
+2021-06-09 21:13:30.733 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5128884315490723
+2021-06-09 21:13:30.736 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7964769601821899
+2021-06-09 21:13:30.737 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.8054330945014954
+2021-06-09 21:13:30.739 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.5768212676048279
+2021-06-09 21:13:30.741 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.5768212676048279
+2021-06-09 21:13:30.743 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5730724930763245
+2021-06-09 21:13:30.744 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:13:30.748 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 12 Early Stopping
+2021-06-09 21:13:30.749 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:13:30.750 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5730725526809692
+2021-06-09 21:13:30.752 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   6              
+2021-06-09 21:13:30.753 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:14:04.011 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 13 Training results
+2021-06-09 21:14:04.012 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:14:04.012 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.8665660619735718
+2021-06-09 21:14:04.013 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.8272033333778381
+2021-06-09 21:14:04.014 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.6032813787460327
+2021-06-09 21:14:04.014 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.579308807849884
+2021-06-09 21:14:04.015 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8650507926940918
+2021-06-09 21:14:04.015 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.8310610055923462
+2021-06-09 21:14:04.016 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.48203080892562866
+2021-06-09 21:14:04.016 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.48203080892562866
+2021-06-09 21:14:04.017 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:14:06.041 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 13 Validation results
+2021-06-09 21:14:06.044 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:14:06.046 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.7940407395362854
+2021-06-09 21:14:06.048 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.7840749025344849
+2021-06-09 21:14:06.051 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5398305058479309
+2021-06-09 21:14:06.051 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.525529682636261
+2021-06-09 21:14:06.052 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7942021489143372
+2021-06-09 21:14:06.053 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.7912788987159729
+2021-06-09 21:14:06.054 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.5712780952453613
+2021-06-09 21:14:06.054 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.5712780952453613
+2021-06-09 21:14:06.055 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5730724930763245
+2021-06-09 21:14:06.055 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:14:06.058 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 13 Early Stopping
+2021-06-09 21:14:06.058 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:14:06.059 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5712780952453613
+2021-06-09 21:14:06.060 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   10             
+2021-06-09 21:14:06.060 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:14:39.342 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 14 Training results
+2021-06-09 21:14:39.343 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:14:39.344 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.8721333742141724
+2021-06-09 21:14:39.344 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.830531895160675
+2021-06-09 21:14:39.345 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.6110392808914185
+2021-06-09 21:14:39.345 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.5870055556297302
+2021-06-09 21:14:39.346 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8709391951560974
+2021-06-09 21:14:39.346 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.8349470496177673
+2021-06-09 21:14:39.347 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.47244971990585327
+2021-06-09 21:14:39.347 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.47244971990585327
+2021-06-09 21:14:39.348 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:14:41.391 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 14 Validation results
+2021-06-09 21:14:41.392 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:14:41.393 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.7917848825454712
+2021-06-09 21:14:41.394 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.7659957408905029
+2021-06-09 21:14:41.395 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5222810506820679
+2021-06-09 21:14:41.396 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5058615803718567
+2021-06-09 21:14:41.397 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7926255464553833
+2021-06-09 21:14:41.399 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.7746363282203674
+2021-06-09 21:14:41.400 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.6104893088340759
+2021-06-09 21:14:41.401 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.6104893088340759
+2021-06-09 21:14:41.402 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5712781548500061
+2021-06-09 21:14:41.402 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:14:41.405 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 14 Early Stopping
+2021-06-09 21:14:41.406 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:14:41.407 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5712780952453613
+2021-06-09 21:14:41.407 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   9              
+2021-06-09 21:14:41.408 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:15:14.865 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 15 Training results
+2021-06-09 21:15:14.866 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:15:14.867 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.876314103603363
+2021-06-09 21:15:14.867 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.8328906893730164
+2021-06-09 21:15:14.868 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.6211035251617432
+2021-06-09 21:15:14.868 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.5963359475135803
+2021-06-09 21:15:14.869 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8748313784599304
+2021-06-09 21:15:14.869 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.837013304233551
+2021-06-09 21:15:14.870 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.46080541610717773
+2021-06-09 21:15:14.870 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.46080541610717773
+2021-06-09 21:15:14.871 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:15:16.699 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 15 Validation results
+2021-06-09 21:15:16.700 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:15:16.701 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.7946818470954895
+2021-06-09 21:15:16.701 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.7989053726196289
+2021-06-09 21:15:16.702 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5345339179039001
+2021-06-09 21:15:16.703 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5218220353126526
+2021-06-09 21:15:16.704 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7916891574859619
+2021-06-09 21:15:16.704 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.8018158674240112
+2021-06-09 21:15:16.705 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.5765309929847717
+2021-06-09 21:15:16.706 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.5765309929847717
+2021-06-09 21:15:16.706 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5712781548500061
+2021-06-09 21:15:16.707 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:15:16.709 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 15 Early Stopping
+2021-06-09 21:15:16.710 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:15:16.711 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5712780952453613
+2021-06-09 21:15:16.711 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   8              
+2021-06-09 21:15:16.712 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:15:50.120 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 16 Training results
+2021-06-09 21:15:50.120 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:15:50.121 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.8773843050003052
+2021-06-09 21:15:50.122 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.8371452689170837
+2021-06-09 21:15:50.122 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.6341906189918518
+2021-06-09 21:15:50.123 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.6085668206214905
+2021-06-09 21:15:50.123 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8761931657791138
+2021-06-09 21:15:50.123 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.8411116003990173
+2021-06-09 21:15:50.124 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.4493703246116638
+2021-06-09 21:15:50.124 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.4493703246116638
+2021-06-09 21:15:50.125 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:15:52.117 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 16 Validation results
+2021-06-09 21:15:52.118 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:15:52.120 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.798634946346283
+2021-06-09 21:15:52.122 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.8031426668167114
+2021-06-09 21:15:52.123 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5398305058479309
+2021-06-09 21:15:52.124 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5281779766082764
+2021-06-09 21:15:52.125 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.794021725654602
+2021-06-09 21:15:52.126 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.8034927845001221
+2021-06-09 21:15:52.128 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.5741025805473328
+2021-06-09 21:15:52.129 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.5741025805473328
+2021-06-09 21:15:52.130 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5712781548500061
+2021-06-09 21:15:52.131 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:15:52.134 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 16 Early Stopping
+2021-06-09 21:15:52.135 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:15:52.137 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5712780952453613
+2021-06-09 21:15:52.139 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   7              
+2021-06-09 21:15:52.142 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:16:25.680 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 17 Training results
+2021-06-09 21:16:25.681 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:16:25.681 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.8833323121070862
+2021-06-09 21:16:25.682 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.8373549580574036
+2021-06-09 21:16:25.683 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.6511654257774353
+2021-06-09 21:16:25.683 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.626459002494812
+2021-06-09 21:16:25.684 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8824164867401123
+2021-06-09 21:16:25.684 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.8415989875793457
+2021-06-09 21:16:25.685 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.4239406883716583
+2021-06-09 21:16:25.685 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.4239406883716583
+2021-06-09 21:16:25.686 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:16:27.605 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 17 Validation results
+2021-06-09 21:16:27.607 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:16:27.608 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.7952519059181213
+2021-06-09 21:16:27.610 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.7654660940170288
+2021-06-09 21:16:27.612 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.540360152721405
+2021-06-09 21:16:27.614 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5271186232566833
+2021-06-09 21:16:27.616 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7977278232574463
+2021-06-09 21:16:27.618 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.776115357875824
+2021-06-09 21:16:27.620 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.57429438829422
+2021-06-09 21:16:27.621 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.57429438829422
+2021-06-09 21:16:27.622 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5712781548500061
+2021-06-09 21:16:27.624 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:16:27.627 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 17 Early Stopping
+2021-06-09 21:16:27.629 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:16:27.630 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5712780952453613
+2021-06-09 21:16:27.631 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   6              
+2021-06-09 21:16:27.632 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:17:01.680 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 18 Training results
+2021-06-09 21:17:01.681 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:17:01.682 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.8831140398979187
+2021-06-09 21:17:01.682 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.8346990942955017
+2021-06-09 21:17:01.683 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.6591068506240845
+2021-06-09 21:17:01.683 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.6336665153503418
+2021-06-09 21:17:01.684 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8822063207626343
+2021-06-09 21:17:01.684 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.8392988443374634
+2021-06-09 21:17:01.685 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.41480252146720886
+2021-06-09 21:17:01.685 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.41480252146720886
+2021-06-09 21:17:01.686 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:17:03.535 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 18 Validation results
+2021-06-09 21:17:03.537 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:17:03.539 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.7890263199806213
+2021-06-09 21:17:03.541 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.7776482701301575
+2021-06-09 21:17:03.543 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5292372703552246
+2021-06-09 21:17:03.545 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5186440944671631
+2021-06-09 21:17:03.547 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7871330380439758
+2021-06-09 21:17:03.548 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.7843478322029114
+2021-06-09 21:17:03.550 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.5800061225891113
+2021-06-09 21:17:03.551 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.5800061225891113
+2021-06-09 21:17:03.553 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5712781548500061
+2021-06-09 21:17:03.554 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:17:03.557 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 18 Early Stopping
+2021-06-09 21:17:03.559 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:17:03.560 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5712780952453613
+2021-06-09 21:17:03.561 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   5              
+2021-06-09 21:17:03.562 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:17:37.011 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 19 Training results
+2021-06-09 21:17:37.011 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:17:37.012 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.8880714774131775
+2021-06-09 21:17:37.013 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.8393730521202087
+2021-06-09 21:17:37.013 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.6650999784469604
+2021-06-09 21:17:37.014 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.6404546499252319
+2021-06-09 21:17:37.014 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8870886564254761
+2021-06-09 21:17:37.015 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.8438900709152222
+2021-06-09 21:17:37.015 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.4070075452327728
+2021-06-09 21:17:37.016 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.4070075452327728
+2021-06-09 21:17:37.016 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:17:38.939 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 19 Validation results
+2021-06-09 21:17:38.940 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:17:38.941 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.7910696864128113
+2021-06-09 21:17:38.942 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.773410975933075
+2021-06-09 21:17:38.943 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5340749025344849
+2021-06-09 21:17:38.943 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5208333730697632
+2021-06-09 21:17:38.944 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7918912172317505
+2021-06-09 21:17:38.945 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.78275066614151
+2021-06-09 21:17:38.945 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.587162971496582
+2021-06-09 21:17:38.946 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.587162971496582
+2021-06-09 21:17:38.947 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5712781548500061
+2021-06-09 21:17:38.947 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:17:38.949 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 19 Early Stopping
+2021-06-09 21:17:38.950 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:17:38.951 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5712780952453613
+2021-06-09 21:17:38.951 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   4              
+2021-06-09 21:17:38.952 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:18:12.947 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 20 Training results
+2021-06-09 21:18:12.947 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:18:12.948 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.8911024332046509
+2021-06-09 21:18:12.948 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.8430685997009277
+2021-06-09 21:18:12.949 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.6669433116912842
+2021-06-09 21:18:12.950 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.6426038146018982
+2021-06-09 21:18:12.950 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8903488516807556
+2021-06-09 21:18:12.951 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.8474956750869751
+2021-06-09 21:18:12.952 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.4040997326374054
+2021-06-09 21:18:12.953 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.4040997326374054
+2021-06-09 21:18:12.955 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:18:14.857 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 20 Validation results
+2021-06-09 21:18:14.858 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:18:14.860 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.7879490256309509
+2021-06-09 21:18:14.862 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.7755296230316162
+2021-06-09 21:18:14.863 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5334745645523071
+2021-06-09 21:18:14.864 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5223516821861267
+2021-06-09 21:18:14.865 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7903553247451782
+2021-06-09 21:18:14.867 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.7857701778411865
+2021-06-09 21:18:14.868 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.5866147875785828
+2021-06-09 21:18:14.869 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.5866147875785828
+2021-06-09 21:18:14.870 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5712781548500061
+2021-06-09 21:18:14.871 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:18:14.874 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 20 Early Stopping
+2021-06-09 21:18:14.876 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:18:14.877 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5712780952453613
+2021-06-09 21:18:14.877 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   3              
+2021-06-09 21:18:14.878 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:18:48.487 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 21 Training results
+2021-06-09 21:18:48.488 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:18:48.488 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.8895965814590454
+2021-06-09 21:18:48.489 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.8414261341094971
+2021-06-09 21:18:48.489 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.6729364991188049
+2021-06-09 21:18:48.490 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.6466050148010254
+2021-06-09 21:18:48.490 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8886399865150452
+2021-06-09 21:18:48.491 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.8456975221633911
+2021-06-09 21:18:48.491 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.3950750529766083
+2021-06-09 21:18:48.492 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.3950750529766083
+2021-06-09 21:18:48.492 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:18:50.367 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 21 Validation results
+2021-06-09 21:18:50.368 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:18:50.369 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.7925246953964233
+2021-06-09 21:18:50.370 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.7850635051727295
+2021-06-09 21:18:50.371 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5366525650024414
+2021-06-09 21:18:50.372 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5234110355377197
+2021-06-09 21:18:50.373 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7914994955062866
+2021-06-09 21:18:50.373 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.791559636592865
+2021-06-09 21:18:50.374 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.5942528247833252
+2021-06-09 21:18:50.375 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.5942528247833252
+2021-06-09 21:18:50.376 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5712781548500061
+2021-06-09 21:18:50.376 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:18:50.379 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 21 Early Stopping
+2021-06-09 21:18:50.379 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:18:50.380 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5712780952453613
+2021-06-09 21:18:50.381 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   2              
+2021-06-09 21:18:50.381 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:19:24.409 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 22 Training results
+2021-06-09 21:19:24.410 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:19:24.411 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.8958252668380737
+2021-06-09 21:19:24.412 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.8440557718276978
+2021-06-09 21:19:24.414 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.6896054744720459
+2021-06-09 21:19:24.415 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.6659386157989502
+2021-06-09 21:19:24.416 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.8946437239646912
+2021-06-09 21:19:24.418 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.8482818603515625
+2021-06-09 21:19:24.419 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.3807813227176666
+2021-06-09 21:19:24.420 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.3807813227176666
+2021-06-09 21:19:24.422 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:19:26.350 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 22 Validation results
+2021-06-09 21:19:26.353 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:19:26.355 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.7758315205574036
+2021-06-09 21:19:26.357 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.750035285949707
+2021-06-09 21:19:26.359 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5248587727546692
+2021-06-09 21:19:26.361 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5132062435150146
+2021-06-09 21:19:26.363 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.78251051902771
+2021-06-09 21:19:26.364 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.7656142711639404
+2021-06-09 21:19:26.366 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.5914140939712524
+2021-06-09 21:19:26.367 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.5914140939712524
+2021-06-09 21:19:26.368 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5712781548500061
+2021-06-09 21:19:26.370 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:19:26.373 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 22 Early Stopping
+2021-06-09 21:19:26.373 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:19:26.374 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5712780952453613
+2021-06-09 21:19:26.375 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   1              
+2021-06-09 21:19:26.376 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:19:59.934 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 23 Training results
+2021-06-09 21:19:59.935 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:19:59.935 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2      0.8974518179893494
+2021-06-09 21:19:59.936 | INFO     | slp.plbind.module:log_to_console:484 - train_acc2_zero 0.8447809219360352
+2021-06-09 21:19:59.937 | INFO     | slp.plbind.module:log_to_console:484 - train_acc5      0.6917982697486877
+2021-06-09 21:19:59.937 | INFO     | slp.plbind.module:log_to_console:484 - train_acc7      0.6658075451850891
+2021-06-09 21:19:59.938 | INFO     | slp.plbind.module:log_to_console:484 - train_f1        0.896511971950531
+2021-06-09 21:19:59.938 | INFO     | slp.plbind.module:log_to_console:484 - train_f1_zero   0.8492686152458191
+2021-06-09 21:19:59.939 | INFO     | slp.plbind.module:log_to_console:484 - train_mae       0.3742508590221405
+2021-06-09 21:19:59.939 | INFO     | slp.plbind.module:log_to_console:484 - train_loss      0.3742508590221405
+2021-06-09 21:19:59.940 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:20:01.931 | INFO     | slp.plbind.module:log_to_console:478 - Epoch 23 Validation results
+2021-06-09 21:20:01.932 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:20:01.932 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2        0.774799644947052
+2021-06-09 21:20:01.933 | INFO     | slp.plbind.module:log_to_console:484 - val_acc2_zero   0.7575211524963379
+2021-06-09 21:20:01.934 | INFO     | slp.plbind.module:log_to_console:484 - val_acc5        0.5243291258811951
+2021-06-09 21:20:01.935 | INFO     | slp.plbind.module:log_to_console:484 - val_acc7        0.5121468901634216
+2021-06-09 21:20:01.935 | INFO     | slp.plbind.module:log_to_console:484 - val_f1          0.7823279500007629
+2021-06-09 21:20:01.936 | INFO     | slp.plbind.module:log_to_console:484 - val_f1_zero     0.7727868556976318
+2021-06-09 21:20:01.937 | INFO     | slp.plbind.module:log_to_console:484 - val_mae         0.5938140153884888
+2021-06-09 21:20:01.938 | INFO     | slp.plbind.module:log_to_console:484 - val_loss        0.5938140153884888
+2021-06-09 21:20:01.938 | INFO     | slp.plbind.module:log_to_console:484 - best_score      0.5712781548500061
+2021-06-09 21:20:01.939 | INFO     | slp.util.system:print_separator:81 - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-06-09 21:20:01.941 | INFO     | slp.plbind.helpers:_run_early_stopping_check:25 - Epoch 23 Early Stopping
+2021-06-09 21:20:01.942 | INFO     | slp.util.system:print_separator:81 - --------------------------------------------------
+2021-06-09 21:20:01.943 | INFO     | slp.plbind.helpers:_run_early_stopping_check:27 - best score      0.5712780952453613
+2021-06-09 21:20:01.943 | INFO     | slp.plbind.helpers:_run_early_stopping_check:28 - patience left   0              
+2021-06-09 21:20:01.944 | INFO     | slp.plbind.helpers:_run_early_stopping_check:33 - Stopping due to early stopping
+2021-06-09 21:20:01.944 | INFO     | slp.util.system:print_separator:81 - ##################################################
+2021-06-09 21:20:02.042 | INFO     | pytorch_lightning.profiler.profilers:describe:96 - 
+
+Profiler Report
+
+Action                             	|  Mean duration (s)	|Num calls      	|  Total time (s) 	|  Percentage %   	|
+------------------------------------------------------------------------------------------------------------------------------------
+Total                              	|  -              	|_              	|  823.56         	|  100 %          	|
+------------------------------------------------------------------------------------------------------------------------------------
+run_training_epoch                 	|  35.647         	|23             	|  819.88         	|  99.553         	|
+run_training_batch                 	|  0.063553       	|11753          	|  746.93         	|  90.696         	|
+optimizer_step_and_closure_0       	|  0.061138       	|11753          	|  718.56         	|  87.25          	|
+training_step_and_backward         	|  0.051264       	|11753          	|  602.5          	|  73.158         	|
+model_forward                      	|  0.029518       	|11753          	|  346.92         	|  42.125         	|
+training_step                      	|  0.02928        	|11753          	|  344.13         	|  41.785         	|
+model_backward                     	|  0.021489       	|11753          	|  252.56         	|  30.667         	|
+evaluation_step_and_end            	|  0.027184       	|1359           	|  36.943         	|  4.4858         	|
+validation_step                    	|  0.027035       	|1359           	|  36.741         	|  4.4612         	|
+get_train_batch                    	|  0.00047395     	|11753          	|  5.5704         	|  0.67638        	|
+on_train_batch_end                 	|  0.00014264     	|11753          	|  1.6764         	|  0.20356        	|
+on_train_batch_start               	|  0.00012719     	|11753          	|  1.4949         	|  0.18151        	|
+cache_result                       	|  1.824e-05      	|63104          	|  1.151          	|  0.13976        	|
+on_validation_end                  	|  0.020369       	|24             	|  0.48886        	|  0.059359       	|
+on_after_backward                  	|  3.505e-05      	|11753          	|  0.41194        	|  0.050019       	|
+on_before_zero_grad                	|  3.0084e-05     	|11753          	|  0.35357        	|  0.042932       	|
+on_batch_start                     	|  2.4827e-05     	|11753          	|  0.29179        	|  0.03543        	|
+on_batch_end                       	|  1.8354e-05     	|11753          	|  0.21572        	|  0.026193       	|
+on_validation_batch_end            	|  8.4359e-05     	|1359           	|  0.11464        	|  0.013921       	|
+training_step_end                  	|  9.1106e-06     	|11753          	|  0.10708        	|  0.013002       	|
+on_train_end                       	|  0.03447        	|1              	|  0.03447        	|  0.0041855      	|
+on_validation_batch_start          	|  1.6687e-05     	|1359           	|  0.022678       	|  0.0027536      	|
+validation_step_end                	|  1.1348e-05     	|1359           	|  0.015422       	|  0.0018726      	|
+on_validation_start                	|  0.00061152     	|24             	|  0.014676       	|  0.0017821      	|
+on_epoch_start                     	|  0.00062855     	|23             	|  0.014457       	|  0.0017554      	|
+on_train_start                     	|  0.0021496      	|1              	|  0.0021496      	|  0.00026101     	|
+on_train_epoch_end                 	|  2.7361e-05     	|23             	|  0.0006293      	|  7.6412e-05     	|
+on_epoch_end                       	|  1.2266e-05     	|47             	|  0.00057649     	|  7e-05          	|
+on_validation_epoch_end            	|  2.2346e-05     	|24             	|  0.00053631     	|  6.512e-05      	|
+on_validation_epoch_start          	|  1.8393e-05     	|24             	|  0.00044143     	|  5.3601e-05     	|
+on_train_epoch_start               	|  1.3441e-05     	|23             	|  0.00030915     	|  3.7538e-05     	|
+on_fit_start                       	|  2.4033e-05     	|1              	|  2.4033e-05     	|  2.9182e-06     	|
+on_before_accelerator_backend_setup	|  1.4358e-05     	|1              	|  1.4358e-05     	|  1.7434e-06     	|
+

@@ -1,0 +1,90 @@
+model:
+  max_length: -1
+  kernel_size: 33
+  nystrom: false
+  num_landmarks: 32
+  num_layers: 1
+  num_heads: 1
+  dropout: 0.2
+  hidden_size: 100
+  inner_size: 200
+  prenorm: false
+  scalenorm: false
+  mmdrop_after_fuse: false
+  p_drop_modalities:
+  - 0.33
+  - 0.33
+  - 0.33
+  feature_sizes:
+    audio: 74
+    visual: 35
+    text: 300
+  batch_first: true
+  bidirectional: true
+  packed_sequence: true
+  merge_bi: sum
+  rnn_type: lstm
+  attention: true
+  multi_modal_drop: mmdrop_hard
+  mmdrop_before_fuse: true
+  p_mmdrop: 0.20
+  use_m3_masking: true
+  use_m3_sequential: true
+preprocessing:
+  pad_front: true
+  pad_back: false
+  remove_pauses: true
+  max_length: -1
+  already_aligned: true
+  align_features: false
+optimizer: Adam
+optim:
+  lr: 0.0005
+  weight_decay: 0
+lr_scheduler: false
+lr_schedule:
+  factor: 0.5
+  patience: 2
+  cooldown: 2
+  min_lr: 2.5e-05
+trainer:
+  experiments_folder: rnn-m3-0.2
+  save_top_k: 1
+  patience: 10
+  tags:
+  - mosei
+  - rnn-baseline
+  - m3
+  - regularization
+  stochastic_weight_avg: false
+  gpus: 0
+  check_val_every_n_epoch: 1
+  gradient_clip_val: 0
+  max_epochs: 100
+  force_wandb_offline: false
+  early_stop_on: val_loss
+  early_stop_mode: min
+  experiment_name: mosei-rnn-m3-0.2
+  experiment_description: 'MOSEI RNN-baseline with M3'
+debug: false
+# tune:
+#   num_trials: 100
+#   gpus_per_trial: 0.5
+#   cpus_per_trial: 1
+#   metric: validation_loss
+  # mode: min
+data:
+  val_percent: 0.2
+  test_percent: 0.2
+  batch_size: 32
+  batch_size_eval: 32
+  num_workers: 1
+  pin_memory: true
+  drop_last: false
+  shuffle_eval: true
+seed: null
+modalities:
+- text
+- audio
+- visual
+config: configs/best.mosei.rnn.symattn.rnn.yml

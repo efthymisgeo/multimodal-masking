@@ -1,0 +1,17 @@
+2021-06-09 16:26:49.923 | INFO     | slp.util.log:configure_logging:84 - Log file will be saved in logs/mosei-fixed-rnn-baseline.20210609-162649.log
+2021-06-09 16:26:50.758 | INFO     | slp.plbind.dm:setup:159 - Using provided validation set
+2021-06-09 16:26:50.759 | INFO     | slp.plbind.dm:setup:162 - Using provided test set
+2021-06-09 16:26:50.759 | INFO     | slp.plbind.dm:setup:212 - Using 16327 samples for training
+2021-06-09 16:26:50.759 | INFO     | slp.plbind.dm:setup:213 - Using 1871 samples for validation
+2021-06-09 16:26:50.759 | INFO     | slp.plbind.dm:setup:216 - Using 4662 samples for testing
+2021-06-09 16:26:50.780 | INFO     | slp.plbind.trainer:make_trainer:428 - Logs will be saved in rnn_drop_text_0.6_m3_seq_mask/mosei-fixed-rnn-baseline
+2021-06-09 16:26:50.780 | INFO     | slp.plbind.trainer:make_trainer:429 - Logs will be saved in rnn_drop_text_0.6_m3_seq_mask/mosei-fixed-rnn-baseline/20210609-162650/checkpoints
+2021-06-09 16:26:50.819 | INFO     | slp.plbind.trainer:make_trainer:461 - Configured wandb and CSV loggers.
+2021-06-09 16:26:50.819 | INFO     | slp.plbind.trainer:make_trainer:462 - Wandb configured to run mosei-fixed-rnn-baseline/20210609-162650 in project mosei-fixed-rnn-baseline
+2021-06-09 16:26:50.820 | INFO     | slp.plbind.trainer:make_trainer:467 - Results will be stored online.
+2021-06-09 16:26:50.820 | INFO     | slp.plbind.trainer:make_trainer:475 - Experiment verbose description:
+MOSEI Corrected RNN baseline architecture
+
+
+Tags:['mosei', 'transformer', 'dropout', 'late-fusion']
+2021-06-09 16:26:50.822 | INFO     | slp.plbind.trainer:make_trainer:496 - Configured Early stopping and Model checkpointing to track val_loss
