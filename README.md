@@ -75,7 +75,7 @@ python cmusdk.py data/
 ```
 
 
-# $M^3$ Experiments
+# M3 Experiments
 
 - Optional
 ```bash

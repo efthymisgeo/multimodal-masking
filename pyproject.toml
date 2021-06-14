@@ -1,0 +1,73 @@
+[tool.poetry]
+name = "M3 Official Implementation"
+version = "0.0.1"
+description = "MultiModal Masking InterSpeech 2021"
+authors = ["Efthymios Georgiou <efthygeo@mail.ntua.gr>"]
+license = "MIT"
+readme = "README.md"
+keywords = ["pytorch", "masking", "multimodal"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Environment :: GPU :: NVIDIA CUDA",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Education",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+torch = "^1.7.1"
+numpy = "^1.19.5"
+pytorch-nlp = "0.4.1"
+transformers = "4.3.0"
+requests = "^2.25.1"
+scikit-learn = "^0.24.1"
+scipy = "^1.6.1"
+spacy = "^3.0.3"
+tqdm = "^4.57.0"
+toolz = "^0.11.1"
+torchvision = "^0.8.2"
+ujson = "^4.0.2"
+sentencepiece = "^0.1.95"
+validators = "^0.18.2"
+nltk = "^3.5"
+loguru = "^0.5.3"
+pytorch-lightning = "1.2.0"
+wandb = "^0.10.20"
+omegaconf = "^2.0.6"
+toml = "^0.10.2"
+aiohttp = "^3.7.4"
+mike = "^0.6.0"
+ray = {extras = ["tune"], version = "^1.2.0"}
+pytorch-lightning-bolts = "^0.3.0"
+gym = "^0.18.0"
+matplotlib = "^3.3.4"
+optuna = "^2.6.0"
+h5py = "^3.2.1"
+torchmetrics = "^0.2.0"
+slp = "^1.1.6"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+pytest = "^6.2.2"
+pytest-cov = "^2.11.1"
+mypy = "^0.812"
+nox = "^2019.5.30"
+ipdb = "^0.13.4"
+ipython = "^7.20.0"
+jupyter = "^1.0.0"
+rope = "^0.18.0"
+isort = "^5.7.0"
+mkdocs = "^1.1.2"
+mkdocs-material = "^7.0.3"
+mkdocstrings = "^0.15.0"
+docstr-coverage = "^2.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
