@@ -24,7 +24,7 @@ accordingly.
 
 As such, the framework is opinionated and it follows a convention over configuration approach. -->
 
-This repo contains the source code for the INTERSPEECH 2021 paper "$M^3$: MultiModal Masking applied to sentiment analysis" (Paper).
+This repo contains the source code for the INTERSPEECH 2021 paper "M3: MultiModal Masking applied to sentiment analysis" (Paper).
 
 <p align="center">
   <img src="./m3.jpg" height="250">
@@ -75,7 +75,7 @@ python cmusdk.py data/
 ```
 
 
-# M3 Experiments
+# M<sup>3</sup> Experiments
 
 - Optional
 ```bash
@@ -106,21 +106,19 @@ python experiments/main.py --config configs/<myconf.yaml> --offline --gpus 1
 If you find our work useful for your research, please include the following citation
 
 ```
-@proceedings{georgiou-2021-m3,
-    title = "M3: MultiModal Masking applied to sentiment analysis",
-    editor = "Georgiou, Efthymios  and
-      Paraskevopoulos, Georgios  and
-      Potamianos, Alexandros",
-    booktitle = "INTERSPEECH 2021",
-    year = "2021",
+@inproceedings{Georgiou2021-M3,
+  author={Efthymios Georgiou and Georgios Paraskevopoulos and Alexandros Potamianos},
+  title={M3: MultiModal Masking applied to sentiment analysis},
+  year=2021,
+  booktitle={Proc. Interspeech 2021},
+  pages={},
+  doi={},
+  url={}
 }
 ```
 
 
-<!-- ## TODOs -->
+## TODOs
 
-<!-- * Optuna integration for hyperparameter tuning
-* Add dataloaders for popular multimodal datasets
-* Add multimodal architectures
-* Add RIM, DNC and Kanerva machine implementations
-* Write unit tests -->
+* Upload pickle with features
+* Update paper url
