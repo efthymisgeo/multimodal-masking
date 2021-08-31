@@ -24,7 +24,7 @@ accordingly.
 
 As such, the framework is opinionated and it follows a convention over configuration approach. -->
 
-This repo contains the source code for the INTERSPEECH 2021 paper "M3: MultiModal Masking applied to sentiment analysis" (Paper).
+This repo contains the source code for the INTERSPEECH 2021 paper ["M3: MultiModal Masking applied to sentiment analysis"](https://www.isca-speech.org/archive/pdfs/interspeech_2021/georgiou21_interspeech.pdf).
 
 <p align="center">
   <img src="./m3.jpg" height="250">
@@ -33,7 +33,7 @@ This repo contains the source code for the INTERSPEECH 2021 paper "M3: MultiModa
 <!-- This is currently in alpha release under active development, so things may break and new features will be added. -->
 
 # Introduction
-This paper presents a generic light-weight layer which can be emdedded in multimodal architectrues, namely $M^3$. This layer takes as input representations from various modalities, e.g. text, audio, visual. It then randomly either masks one of them or leaves the total representation unaffected. $M^3$ is applied at every time step in the multimodal sequence, acting as a form of regularization.
+This paper presents $M^3$, a generic light-weight layer which can be emdedded in multimodal architectrues without any modifications and without any additional learnable parameters. $M^3$ takes as input representations from various modalities, e.g. text, audio, visual. It then randomly either masks one of them or leaves the total representation unaffected. $M^3$ is applied at every time step in the multimodal sequence, acting as a form of regularization.
 
 
 <!-- - [Pytorch Lightning](https://pytorch-lightning.readthedocs.io/en/stable/)
@@ -106,14 +106,13 @@ python experiments/main.py --config configs/<myconf.yaml> --offline --gpus 1
 If you find our work useful for your research, please include the following citation
 
 ```
-@inproceedings{Georgiou2021-M3,
+@inproceedings{georgiou21_interspeech,
   author={Efthymios Georgiou and Georgios Paraskevopoulos and Alexandros Potamianos},
-  title={M3: MultiModal Masking applied to sentiment analysis},
+  title={{M3: MultiModal Masking Applied to Sentiment Analysis}},
   year=2021,
   booktitle={Proc. Interspeech 2021},
-  pages={},
-  doi={},
-  url={}
+  pages={2876--2880},
+  doi={10.21437/Interspeech.2021-1739}
 }
 ```
 
@@ -121,4 +120,3 @@ If you find our work useful for your research, please include the following cita
 ## TODOs
 
 * Upload pickle with features
-* Update paper url
