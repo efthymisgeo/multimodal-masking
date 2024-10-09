@@ -24,7 +24,7 @@ accordingly.
 
 As such, the framework is opinionated and it follows a convention over configuration approach. -->
 
-This repo contains the source code for the INTERSPEECH 2021 paper ["M3: MultiModal Masking applied to sentiment analysis"](https://www.isca-speech.org/archive/pdfs/interspeech_2021/georgiou21_interspeech.pdf).
+This repo contains the source code for the INTERSPEECH 2021 paper ["M3: MultiModal Masking applied to sentiment analysis"](https://www.isca-archive.org/interspeech_2021/georgiou21_interspeech.pdf).
 
 <p align="center">
   <img src="./m3.jpg" height="250">
